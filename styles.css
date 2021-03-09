@@ -99,3 +99,9 @@ color :#fff;
 display: block;
 font-size: 18px;
 }
+.profile .media-sosial ul li.tugasphp{
+width: auto;
+height: 45px;
+background: linear-gradient(to right,#0a3435,#6ed3d4);
+text-align: center;
+}
