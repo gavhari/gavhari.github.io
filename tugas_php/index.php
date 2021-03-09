@@ -6,12 +6,13 @@
 </head>
 <body style="background-image: url('bg-01.jpg');">
 	<?php 
-	//jika menerima POST 'hitung'
-	if(isset($_POST['hitung'])){
-		$bil1 = $_POST['bil1'];
-		$bil2 = $_POST['bil2'];
+	//Kalkulator sederhana
+	//jika menerima POST 'hitung' maka akan dijalankan
+	if(isset($_POST['hitung'])){ //kondisi if
+		$bil1 = $_POST['bil1']; //variabel bil1
+		$bil2 = $_POST['bil2']; //variabel bil2
 		$operasi = $_POST['operasi'];
-		switch ($operasi) {
+		switch ($operasi) { //kondisi switch case
 			case 'tambah':
 				$hasil = $bil1+$bil2;
 			break;
@@ -44,10 +45,10 @@
 				<option value="kali">*</option>
 				<option value="bagi">:</option>
 			</select>
-			<input type="submit" name="hitung" value="Hitung" class="tombol">											
+			<input type="submit" name="hitung" value="hitung" class="tombol">											
 		</form>
 		<?php if(isset($_POST['hitung'])){ ?>
-			<input type="text" value="<?php echo $hasil; ?>" class="bil">
+			<input type="text" value="<?php echo $hasil; ?>" class="bil"> //menampilkan hasil
 		<?php }else{ ?>
 			<input type="text" value="0" class="bil">
 		<?php } ?>			
